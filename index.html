@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-M">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultoria em IA | Automação Empresarial com Resultados Reais - La.iA</title>
+    <meta name="description" content="Transforme sua empresa com soluções de IA: reduza custos operacionais em até 40% e aumente a eficiência. Consultoria especializada em automação B2B. Agende uma demonstração.">
+    <meta name="robots" content="index, follow, max-snippet:150">
+    <link rel="canonical" href="https://laia.solutions"> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #0A0A0A; 
+            color: #F8F9FA; 
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1e293b; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4b5563; 
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280; 
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px; 
+            max-height: 350px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+                max-height: 400px;
+            }
+        }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        
+        .tech-logo {
+            height: 40px; 
+            width: auto;
+            margin: 0.5rem;
+            filter: grayscale(30%) brightness(1.2) contrast(1.1); 
+        }
+         .section-title { /* H2 nas seções */
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 700; /* bold */
+            color: #F8F9FA; 
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .section-subtitle {
+            font-size: 1.125rem; /* text-lg */
+            color: #cbd5e1; 
+            text-align: center;
+            margin-bottom: 3rem; /* mb-12 */
+            max-width: 42rem; /* max-w-2xl */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .light-section {
+            background-color: #ffffff; 
+            color: #1e293b; 
+        }
+        .light-section .section-title { /* H2 nas seções claras */
+            color: #1e293b; 
+        }
+        .light-section .section-subtitle {
+            color: #475569; 
+        }
+        .light-section .card-bg {
+             background-color: #f8fafc; 
+        }
+        .light-section .card-title { /* H3 nos cards */
+            color: #1e293b; 
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* semibold */
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+         .light-section .card-text-secondary {
+            color: #475569; 
+        }
+         .light-section .tab-button {
+            color: #475569; 
+        }
+        .light-section .tab-button.active {
+            color: #8b5cf6; 
+            border-color: #8b5cf6;
+        }
+         .light-section .tab-button:not(.active):hover {
+            color: #334155; 
+            border-color: #a855f7; 
+        }
+        .dark-section-card-title { /* H3 nos cards de seções escuras */
+             color: #e2e8f0; /* slate-200 */
+             font-size: 1.25rem; /* text-xl */
+             font-weight: 600; /* semibold */
+             margin-bottom: 0.5rem; /* mb-2 */
+        }
+        .dark-section-card-text {
+            color: #cbd5e1; /* slate-300 */
+        }
+        .faq-item details {
+            background-color: #1e293b; 
+            border-radius: 0.375rem; 
+            margin-bottom: 0.5rem; 
+            border: 1px solid #334155; 
+        }
+        .faq-item summary {
+            padding: 1rem; 
+            font-weight: 600; 
+            color: #e2e8f0; 
+            cursor: pointer;
+            list-style: none; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-item summary::-webkit-details-marker { 
+            display: none;
+        }
+        .faq-item summary::after { 
+            content: '+';
+            font-size: 1.5rem;
+            color: #a855f7; 
+            transition: transform 0.2s;
+        }
+        .faq-item details[open] summary::after {
+            content: '−';
+        }
+        .faq-item div { 
+            padding: 0 1rem 1rem 1rem; 
+            color: #cbd5e1; 
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+    </style>
+</head>
+<body class="bg-black text-slate-100">
+
+    <header class="bg-black/90 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-slate-700">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="https://laia.solutions" class="flex items-center">
+                <img src="https://placehold.co/120x40/FFFFFF/0A0A0A?text=La.iA&font=sans-serif&font=bold" alt="Logo La.iA - Consultoria em Inteligência Artificial e Automação Empresarial" class="h-9 md:h-10">
+            </a>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="#problema" class="text-slate-200 hover:text-purple-400 transition-colors">O Problema</a>
+                <a href="#solucoes" class="text-slate-200 hover:text-purple-400 transition-colors">Soluções de IA</a>
+                <a href="#tecnologias" class="text-slate-200 hover:text-purple-400 transition-colors">Tecnologias</a>
+                <a href="#precos" class="text-slate-200 hover:text-purple-400 transition-colors">Planos de Consultoria IA</a>
+                <a href="#quem-somos" class="text-slate-200 hover:text-purple-400 transition-colors">Sobre a La.iA</a>
+                <a href="#contato" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-5 rounded-md transition-colors">Agende uma Consultoria</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-slate-200 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-slate-900">
+            <a href="#problema" class="block py-3 px-6 text-slate-200 hover:bg-slate-800 hover:text-purple-400">O Problema</a>
+            <a href="#solucoes" class="block py-3 px-6 text-slate-200 hover:bg-slate-800 hover:text-purple-400">Soluções de IA</a>
+            <a href="#tecnologias" class="block py-3 px-6 text-slate-200 hover:bg-slate-800 hover:text-purple-400">Tecnologias</a>
+            <a href="#precos" class="block py-3 px-6 text-slate-200 hover:bg-slate-800 hover:text-purple-400">Planos de Consultoria IA</a>
+            <a href="#quem-somos" class="block py-3 px-6 text-slate-200 hover:bg-slate-800 hover:text-purple-400">Sobre a La.iA</a>
+            <a href="#contato" class="block py-3 px-6 text-purple-400 bg-slate-800 hover:bg-purple-600 hover:text-white font-semibold">Agende uma Consultoria</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="bg-black text-white min-h-[calc(100vh-80px)] flex items-center justify-center py-20 md:py-0">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                    Sua empresa <span class="text-purple-500">precisa</span> de IA.
+                    <span class="block mt-2 md:mt-3">Nós entregamos <span class="text-sky-400">economia real</span> com Automação Empresarial.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
+                    A La.iA traduz o potencial da Inteligência Artificial em resultados tangíveis e lucratividade para o seu negócio B2B. Descubra nossas soluções de automação e consultoria em IA.
+                </p>
+                <a href="#contato" class="bg-purple-600 text-white font-bold py-3 px-10 rounded-md text-lg hover:bg-purple-700 transition-colors shadow-lg transform hover:scale-105">
+                    Agende sua Consultoria em IA
+                </a>
+            </div>
+        </section>
+
+        <section id="problema" class="py-16 md:py-24 light-section">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Sua Empresa Enfrenta Estas Limitações Comuns em Processos e Atendimento?</h2>
+                <p class="section-subtitle">Identificar esses desafios é o primeiro passo para a transformação digital. A La.iA, consultoria em IA, existe para converter esses obstáculos em oportunidades de crescimento e eficiência com automação inteligente.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="card-bg p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="text-3xl mb-3 text-purple-500">⏳</div>
+                        <h3 class="card-title">Atendimento e Processos Limitados</h3>
+                        <p class="card-text-secondary text-sm">Equipe sobrecarregada com tarefas repetitivas? Dificuldade em escalar o atendimento mantendo a personalização e agilidade?</p>
+                    </div>
+                    <div class="card-bg p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="text-3xl mb-3 text-purple-500">🔗</div>
+                        <h3 class="card-title">Escalabilidade Restrita em Operações</h3>
+                        <p class="card-text-secondary text-sm">Processos manuais criando gargalos que limitam seu potencial de mercado e expansão eficiente de operações B2B?</p>
+                    </div>
+                    <div class="card-bg p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="text-3xl mb-3 text-purple-500">📊</div>
+                        <h3 class="card-title">Análise Manual e Lenta de Dados</h3>
+                        <p class="card-text-secondary text-sm">Tomada de decisão demorada devido à análise manual de dados? Insights valiosos para seu negócio B2B difíceis de acessar?</p>
+                    </div>
+                    <div class="card-bg p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="text-3xl mb-3 text-purple-500">💸</div>
+                        <h3 class="card-title">Custos Elevados e Tempo Desperdiçado</h3>
+                        <p class="card-text-secondary text-sm">Recursos preciosos (tempo e dinheiro) consumidos por tarefas operacionais que poderiam ser automatizadas com IA?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="solucoes" class="py-16 md:py-24 bg-black">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Consultoria em IA: Soluções La.iA para Transformar Seus Processos Empresariais</h2>
+                <p class="section-subtitle">Explore como nossa consultoria em inteligência artificial pode otimizar seu atendimento ao cliente, processos internos, análises preditivas e estratégias de marketing B2B.</p>
+                
+                <div class="max-w-3xl mx-auto">
+                    <div class="mb-6 border-b border-slate-700">
+                        <nav class="flex flex-wrap justify-center sm:space-x-2 md:space-x-4" aria-label="Tabs">
+                            <button class="tab-button active text-purple-500 hover:text-purple-400 whitespace-nowrap pb-3 px-2 sm:px-3 md:px-4 border-b-2 font-semibold text-sm sm:text-base border-purple-600" data-tab="atendimento">
+                                Atendimento Inteligente com IA
+                            </button>
+                            <button class="tab-button text-slate-300 hover:text-slate-100 whitespace-nowrap pb-3 px-2 sm:px-3 md:px-4 border-b-2 font-semibold text-sm sm:text-base border-transparent hover:border-purple-500" data-tab="processos">
+                                Otimização de Processos B2B com IA
+                            </button>
+                            <button class="tab-button text-slate-300 hover:text-slate-100 whitespace-nowrap pb-3 px-2 sm:px-3 md:px-4 border-b-2 font-semibold text-sm sm:text-base border-transparent hover:border-purple-500" data-tab="analise">
+                                Análise Preditiva e Business Intelligence
+                            </button>
+                            <button class="tab-button text-slate-300 hover:text-slate-100 whitespace-nowrap pb-3 px-2 sm:px-3 md:px-4 border-b-2 font-semibold text-sm sm:text-base border-transparent hover:border-purple-500" data-tab="marketing">
+                                Marketing e Geração de Leads com IA
+                            </button>
+                        </nav>
+                    </div>
+
+                    <div id="tab-atendimento" class="tab-content active p-4 bg-slate-900 rounded-lg shadow-md">
+                        <h3 class="dark-section-card-title">Automação Inteligente de Atendimento ao Cliente B2B</h3>
+                        <p class="dark-section-card-text mb-4">Nossos agentes de IA oferecem suporte 24/7, resolvem dúvidas, qualificam leads e aumentam a satisfação do cliente, reduzindo custos operacionais e melhorando a experiência do cliente B2B.</p>
+                         <ul class="list-disc list-inside dark-section-card-text space-y-1">
+                            <li>Implementação de Chatbots Corporativos com Processamento de Linguagem Natural</li>
+                            <li>Respostas instantâneas e precisas para FAQs complexas de negócios</li>
+                            <li>Triagem e direcionamento inteligente de chamados para equipes especializadas</li>
+                            <li>Coleta e análise de feedback automatizada para melhoria contínua dos serviços</li>
+                        </ul>
+                    </div>
+                    <div id="tab-processos" class="tab-content p-4 bg-slate-900 rounded-lg shadow-md">
+                        <h3 class="dark-section-card-title">Otimização de Processos Internos Empresariais com IA</h3>
+                        <p class="dark-section-card-text mb-4">Automatize fluxos de trabalho em RH, finanças e operações B2B. Aumente a agilidade da sua empresa, reduza a carga manual e elimine custos desnecessários com nossas soluções de IA.</p>
+                        <ul class="list-disc list-inside dark-section-card-text space-y-1">
+                            <li>Consultoria para automação de tarefas repetitivas e demoradas em processos empresariais</li>
+                            <li>Otimização de fluxos de aprovação e validação de documentos corporativos</li>
+                            <li>Gestão inteligente de documentos e dados empresariais com IA</li>
+                            <li>Redução de erros manuais e retrabalho em operações B2B críticas</li>
+                        </ul>
+                    </div>
+                    <div id="tab-analise" class="tab-content p-4 bg-slate-900 rounded-lg shadow-md">
+                        <h3 class="dark-section-card-title">Análise Preditiva e Business Intelligence para Empresas</h3>
+                        <p class="dark-section-card-text mb-4">Transforme dados em inteligência acionável para seu negócio B2B. Identifique tendências de mercado, preveja resultados e tome decisões que otimizam investimentos e reduzem riscos.</p>
+                         <ul class="list-disc list-inside dark-section-card-text space-y-1">
+                            <li>Previsão de demanda e comportamento de consumo no setor B2B com IA</li>
+                            <li>Identificação de padrões, anomalias e oportunidades de crescimento de negócios</li>
+                            <li>Análise de sentimento de clientes corporativos em larga escala</li>
+                            <li>Otimização de precificação e estratégias de estoque para empresas com IA</li>
+                        </ul>
+                    </div>
+                    <div id="tab-marketing" class="tab-content p-4 bg-slate-900 rounded-lg shadow-md">
+                        <h3 class="dark-section-card-title">Automação de Marketing e Captação de Leads B2B com IA</h3>
+                        <p class="dark-section-card-text mb-4">Qualifique leads B2B com menor custo, personalize jornadas de nutrição, otimize campanhas de marketing digital e identifique as melhores oportunidades de conversão com o poder da IA.</p>
+                        <ul class="list-disc list-inside dark-section-card-text space-y-1">
+                            <li>Consultoria para qualificação e scoring automático de leads empresariais</li>
+                            <li>Personalização de campanhas de marketing B2B em escala com inteligência artificial</li>
+                            <li>Automação inteligente de nutrição de leads qualificados para vendas</li>
+                            <li>Otimização de funis de conversão e ROI em marketing digital B2B</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tecnologias" class="py-16 md:py-24 bg-slate-950">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Tecnologias de Ponta em Nossas Soluções de Consultoria IA</h2>
+                <p class="section-subtitle">Combinamos as mais avançadas ferramentas e plataformas de IA para construir soluções de automação robustas e eficazes para sua empresa B2B.</p>
+                <div class="flex flex-wrap justify-center items-center gap-4 md:gap-8">
+                    <img src="https://placehold.co/150x50/FFFFFF/0A0A0A?text=Microsoft+Azure&font=sans-serif" alt="Logo Microsoft Azure AI Platform para soluções empresariais" class="tech-logo">
+                    <img src="https://placehold.co/180x50/FFFFFF/0A0A0A?text=Google+Cloud+AI&font=sans-serif" alt="Logo Google Cloud AI Solutions para negócios" class="tech-logo">
+                    <img src="https://placehold.co/130x50/FFFFFF/0A0A0A?text=ChatGPT&font=sans-serif" alt="Logo ChatGPT para automação inteligente de texto" class="tech-logo">
+                    <img src="https://placehold.co/100x50/FFFFFF/0A0A0A?text=Claude&font=sans-serif" alt="Logo Claude AI para processamento de linguagem natural" class="tech-logo">
+                    <img src="https://placehold.co/120x50/FFFFFF/0A0A0A?text=Make.com&font=sans-serif" alt="Logo Make.com para integração de processos e automação" class="tech-logo">
+                    <img src="https://placehold.co/100x50/FFFFFF/0A0A0A?text=Zapier&font=sans-serif" alt="Logo Zapier para automação de workflows B2B" class="tech-logo">
+                    <img src="https://placehold.co/80x50/FFFFFF/0A0A0A?text=n8n&font=sans-serif" alt="Logo n8n para automação de fluxo de trabalho open-source" class="tech-logo">
+                    <img src="https://placehold.co/100x50/FFFFFF/0A0A0A?text=Gemini&font=sans-serif" alt="Logo Google Gemini AI para modelos de linguagem avançados" class="tech-logo">
+                    <img src="https://placehold.co/130x50/FFFFFF/0A0A0A?text=ElevenLabs&font=sans-serif" alt="Logo ElevenLabs para IA de voz e áudio" class="tech-logo">
+                    <img src="https://placehold.co/150x50/FFFFFF/0A0A0A?text=Evolution+API&font=sans-serif" alt="Logo Evolution API para integrações de comunicação" class="tech-logo">
+                </div>
+            </div>
+        </section>
+
+        <section id="calculadora" class="py-16 md:py-24 light-section">
+             <div class="container mx-auto px-6">
+                <h2 class="section-title">Calcule Sua Economia Potencial com Automação IA da La.iA</h2>
+                <p class="section-subtitle">Descubra quanto sua empresa pode economizar anualmente automatizando o pré-atendimento e processos com a consultoria em IA da La.iA.</p>
+                <div class="max-w-4xl mx-auto card-bg p-8 rounded-lg shadow-xl">
+                    <div class="grid md:grid-cols-3 gap-6 mb-8">
+                        <div>
+                            <label for="horasDiarias" class="block text-sm font-medium card-text-main mb-1">Horas/dia por funcionário (pré-atendimento):</label>
+                            <input type="number" id="horasDiarias" value="2" class="w-full p-3 border border-slate-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 text-slate-800">
+                        </div>
+                        <div>
+                            <label for="custoHora" class="block text-sm font-medium card-text-main mb-1">Custo da Hora do Funcionário (R$):</label>
+                            <input type="number" id="custoHora" value="25" class="w-full p-3 border border-slate-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 text-slate-800">
+                        </div>
+                        <div>
+                            <label for="numFuncionarios" class="block text-sm font-medium card-text-main mb-1">Nº de Funcionários (pré-atendimento):</label>
+                            <input type="number" id="numFuncionarios" value="3" class="w-full p-3 border border-slate-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 text-slate-800">
+                        </div>
+                    </div>
+                    <div class="text-center mb-8">
+                        <button id="calcularCusto" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-md text-lg transition-colors shadow-md transform hover:scale-105">
+                            Calcular Economia Estimada com IA
+                        </button>
+                    </div>
+                    <div id="resultadosCusto" class="text-center hidden">
+                        <p class="text-lg card-text-secondary mb-2">Custo Mensal Estimado (Manual): <strong id="custoMensal" class="text-sky-600 text-xl">R$ 0,00</strong></p>
+                        <p class="text-xl card-text-secondary mb-1">Custo Anual Estimado (Manual): <strong id="custoAnual" class="text-red-600 text-2xl">R$ 0,00</strong></p>
+                        <p class="text-lg text-green-600 font-semibold mt-4 mb-6">Economia Anual Potencial com La.iA: <strong id="economiaAnualLaia" class="text-2xl">R$ 0,00</strong></p>
+                        <div class="chart-container">
+                            <canvas id="custoChart"></canvas>
+                        </div>
+                         <p class="mt-6 text-xs text-slate-500">Valores estimativos. A economia real pode variar. Entre em contato para uma análise personalizada de automação empresarial com IA.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="precos" class="py-16 md:py-24 bg-black">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Planos Transparentes para Sua Consultoria em Inteligência Artificial</h2>
+                <p class="section-subtitle">Oferecemos modelos de contratação flexíveis para nossas soluções de IA, focados em entregar o máximo valor para sua empresa B2B e otimizar seu ROI.</p>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-slate-900 p-8 rounded-lg shadow-2xl border-t-4 border-purple-500 flex flex-col hover:border-purple-400 transition-all duration-300">
+                        <h3 class="dark-section-card-title text-2xl">Plano Inicial: Consultoria Estratégica IA</h3>
+                        <p class="text-purple-400 font-semibold text-3xl mb-4">R$1.000 <span class="text-base font-normal text-slate-400">/sessão</span></p>
+                        <p class="dark-section-card-text mb-6 flex-grow">Ideal para empresas B2B que buscam um diagnóstico preciso e um plano estratégico para iniciar sua jornada de automação com IA e inteligência artificial.</p>
+                        <ul class="dark-section-card-text space-y-2 mb-8 flex-grow">
+                            <li class="flex items-center"><span class="text-green-400 mr-2">✔</span>Consultoria Estratégica Detalhada em Inteligência Artificial</li>
+                            <li class="flex items-center"><span class="text-green-400 mr-2">✔</span>Mapeamento de Oportunidades de Automação Empresarial com IA</li>
+                            <li class="flex items-center"><span class="text-green-400 mr-2">✔</span>Desenho de Plano de Ação Inicial para Soluções de IA B2B</li>
+                            <li class="flex items-center"><span class="text-green-400 mr-2">✔</span>Relatório de Potencial de Economia e ROI com Inteligência Artificial</li>
+                        </ul>
+                        <a href="#contato" class="mt-auto bg-purple-500 hover:bg-purple-600 text-white text-center font-semibold py-3 px-6 rounded-md transition-colors w-full">Quero o Plano Inicial de Consultoria IA</a>
+                    </div>
+                    <div class="bg-slate-900 p-8 rounded-lg shadow-2xl border-t-4 border-purple-600 flex flex-col hover:border-purple-500 transition-all duration-300">
+                        <h3 class="dark-section-card-title text-2xl">Plano Pro: Implementação Completa de Soluções IA</h3>
+                        <p class="text-purple-500 font-semibold text-3xl mb-4">Sob Consulta</p>
+                        <p class="dark-section-card-text mb-6 flex-grow">Para empresas prontas para uma transformação digital completa, com implementação de soluções de IA customizadas e integradas aos seus processos B2B.</p>
+                        <ul class="dark-section-card-text space-y-2 mb-8 flex-grow">
+                            <li class="flex items-center"><span class="text-green-400 mr-2">✔</span>Todas as features do Plano Inicial de Consultoria IA</li>
+                            <li class="flex items-center"><span class="text-green-400 mr-2">✔</span>Desenvolvimento e Implementação de Soluções de Inteligência Artificial Personalizadas</li>
+                            <li class="flex items-center"><span class="text-green-400 mr-2">✔</span>Integração com Sistemas Empresariais Existentes (ERP, CRM)</li>
+                            <li class="flex items-center"><span class="text-green-400 mr-2">✔</span>Treinamento Especializado e Suporte Contínuo para Automação com IA</li>
+                        </ul>
+                        <a href="#contato" class="mt-auto bg-purple-600 hover:bg-purple-700 text-white text-center font-semibold py-3 px-6 rounded-md transition-colors w-full">Solicitar Cotação para Implementação IA</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quem-somos" class="py-16 md:py-24 light-section">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Conheça a La.iA: Sua Consultoria Especializada em Automação com IA</h2>
+                <p class="section-subtitle">Somos especialistas em traduzir o complexo mundo da Inteligência Artificial em soluções práticas que geram resultados reais e economia para sua empresa B2B.</p>
+                <div class="max-w-3xl mx-auto text-center">
+                    <p class="card-text-secondary mb-4 leading-relaxed">Com uma equipe multidisciplinar apaixonada por tecnologia e inovação, a La.iA nasceu com o propósito de democratizar o acesso a soluções de IA de alto impacto. Acreditamos que toda empresa, independentemente do tamanho, pode se beneficiar da automação inteligente para otimizar processos, reduzir custos e focar no que realmente importa: o crescimento do seu negócio.</p>
+                    <p class="card-text-secondary mb-6 leading-relaxed">Nossa abordagem é consultiva e personalizada. Entendemos seus desafios B2B, mergulhamos na sua operação e desenhamos estratégias de IA que se alinham perfeitamente aos seus objetivos. Transparência, expertise técnica e foco no cliente são os pilares do nosso trabalho em consultoria de inteligência artificial.</p>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3 mt-8">Nossas Credenciais em IA e Segurança da Informação:</h3>
+                    <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-3">
+                        <span class="bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-medium">Certificação de Data Science Full Stack</span>
+                        <span class="bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-medium">Proteção de Dados e Segurança da Informação (LGPD)</span>
+                        <span class="bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-medium">IA Automation Specialist</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="faq" class="py-16 md:py-24 bg-black">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Perguntas Frequentes sobre Consultoria em IA para Empresas B2B</h2>
+                <p class="section-subtitle">Esclareça suas dúvidas sobre como a La.iA pode ajudar sua empresa com soluções de inteligência artificial e automação empresarial B2B.</p>
+                <div class="max-w-3xl mx-auto space-y-3">
+                    <div class="faq-item">
+                        <details>
+                            <summary>Quanto custa implementar IA na minha empresa com a consultoria da La.iA?</summary>
+                            <div>
+                                <p>O custo de implementação de IA varia consideravelmente dependendo da complexidade da solução, do tamanho da sua empresa e dos processos B2B a serem automatizados. Nosso "Plano Inicial" de consultoria estratégica, a R$ 1.500 por sessão, oferece um diagnóstico preciso e um plano de ação com estimativas de investimento. Para projetos de implementação completa ("Plano Pro"), elaboramos um orçamento personalizado após entendermos suas necessidades específicas. Nosso foco é sempre entregar um ROI claro e economia real para seu negócio.</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary>Quanto tempo leva para ver resultados com as soluções de automação IA da La.iA?</summary>
+                            <div>
+                                <p>O tempo para ver resultados tangíveis pode variar. Algumas otimizações, como a implementação de chatbots para atendimento B2B, podem mostrar melhorias na eficiência e redução de custos em poucas semanas. Projetos mais complexos de automação de processos empresariais ou análise preditiva podem levar alguns meses para plena implementação e maturação dos resultados. Durante nossa consultoria em IA, estabelecemos um cronograma claro e marcos para acompanhamento do progresso e do ROI.</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary>Minha empresa é pequena/média (PME). A La.iA tem soluções de IA para o meu porte?</summary>
+                            <div>
+                                <p>Sim! A La.iA é especializada em democratizar o acesso a soluções de IA para empresas de todos os portes, incluindo pequenas e médias empresas (PMEs) do setor B2B. Nossa abordagem consultiva nos permite adaptar as soluções de inteligência artificial e automação para a realidade e o orçamento de cada cliente, focando em otimizações que tragam o maior impacto e economia, independentemente do tamanho da sua operação.</p>
+                            </div>
+                        </details>
+                    </div>
+                     <div class="faq-item">
+                        <details>
+                            <summary>Como a La.iA garante a segurança dos dados da minha empresa ao implementar soluções de IA?</summary>
+                            <div>
+                                <p>A segurança dos dados é uma prioridade máxima na La.iA. Seguimos as melhores práticas de segurança da informação e conformidade com a LGPD em todos os nossos projetos. Nossas soluções de IA são desenvolvidas com arquiteturas seguras, e trabalhamos em estreita colaboração com sua equipe de TI para garantir que todas as políticas de segurança da sua empresa sejam respeitadas durante a implementação e operação das ferramentas de automação.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-16 md:py-24 bg-slate-950">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Vamos Conversar sobre o Futuro da Sua Empresa com Inteligência Artificial?</h2>
+                <p class="section-subtitle">Descubra como a consultoria em IA da La.iA pode ser o motor de crescimento e economia do seu negócio B2B. Agende uma demonstração gratuita ou entre em contato para um plano de automação personalizado.</p>
+                <div class="max-w-xl mx-auto bg-slate-900 p-8 md:p-10 rounded-lg shadow-2xl">
+                    <p class="text-center mb-6 text-lg text-slate-100"><strong>La.iA - Inteligência Artificial que Gera Resultados e Economia Real para Empresas.</strong></p>
+                    <a href="mailto:luizaquino@laia.solutions?subject=Interesse%20em%20Consultoria%20IA%20e%20Automação%20Empresarial%20-%20La.iA" class="block w-full text-center bg-purple-600 hover:bg-purple-700 text-white font-bold py-3.5 px-6 rounded-md text-lg transition-colors mb-6 transform hover:scale-105">
+                        Agendar Demonstração Gratuita de Soluções IA
+                    </a>
+                    <p class="text-center text-slate-400 mb-2">Ou fale conosco diretamente:</p>
+                    <p class="text-center font-semibold text-slate-100">E-mail: <a href="mailto:luizaquino@laia.solutions" class="text-purple-400 hover:underline">luizaquino@laia.solutions</a></p>
+                    <p class="text-center font-semibold text-slate-100">Telefone: <a href="tel:+5561981127366" class="text-purple-400 hover:underline">(61) 98112-7366</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black text-slate-400 py-8 text-center border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <p>&copy; <span id="currentYear"></span> La.iA. Todos os direitos reservados. Consultoria em IA e Automação Empresarial.</p>
+            <p class="text-sm">Inteligência Artificial para Negócios Inteligentes B2B.</p>
+        </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "La.iA",
+      "alternateName": "La.iA - Consultoria em IA e Automação Empresarial",
+      "url": "https://laia.solutions", 
+      "logo": "https://laia.solutions/images/logo_laia_schema.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-61-98112-7366",
+        "contactType": "Consultoria em IA",
+        "email": "luizaquino@laia.solutions",
+        "areaServed": "BR",
+        "availableLanguage": ["Portuguese"]
+      },
+      "sameAs": [ 
+        "URL_LINKEDIN_DA_LAIA_AQUI",
+        "URL_INSTAGRAM_DA_LAIA_AQUI"
+      ],
+      "description": "A La.iA é uma consultoria especializada em soluções de Inteligência Artificial e automação empresarial para negócios B2B, focada em entregar economia real e resultados tangíveis através de IA."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "La.iA - Consultoria em IA e Automação Empresarial",
+      "url": "https://laia.solutions",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://laia.solutions/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Consultoria em Inteligência Artificial",
+      "provider": {
+        "@type": "Organization",
+        "name": "La.iA"
+      },
+      "name": "Automação Inteligente de Atendimento ao Cliente com IA",
+      "description": "Implementação de chatbots corporativos e voicebots com IA para otimizar o atendimento B2B, reduzir custos operacionais e aumentar a satisfação do cliente.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "BR"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "BRL",
+        "name": "Plano Pro - Automação de Atendimento com IA" 
+      },
+      "url": "https://laia.solutions#solucoes"
+    }
+    </script>
+     <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Consultoria em Automação de Processos B2B",
+      "provider": {
+        "@type": "Organization",
+        "name": "La.iA"
+      },
+      "name": "Otimização de Processos Internos Empresariais com IA",
+      "description": "Automação de fluxos de trabalho em RH, finanças e operações B2B utilizando Inteligência Artificial para aumentar a agilidade empresarial e reduzir custos.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "BR"
+      },
+       "offers": {
+        "@type": "Offer",
+        "priceCurrency": "BRL",
+        "name": "Plano Pro - Otimização de Processos com IA"
+      },
+      "url": "https://laia.solutions#solucoes"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Consultoria em Análise Preditiva",
+      "provider": {
+        "@type": "Organization",
+        "name": "La.iA"
+      },
+      "name": "Análise Preditiva e Business Intelligence para Empresas",
+      "description": "Transforme dados em inteligência acionável para seu negócio B2B. Identifique tendências de mercado e preveja resultados com IA.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "BR"
+      },
+       "offers": {
+        "@type": "Offer",
+        "priceCurrency": "BRL",
+        "name": "Plano Pro - Análise Preditiva com IA"
+      },
+      "url": "https://laia.solutions#solucoes"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Consultoria em Marketing Digital com IA",
+      "provider": {
+        "@type": "Organization",
+        "name": "La.iA"
+      },
+      "name": "Automação de Marketing e Geração de Leads B2B com IA",
+      "description": "Qualifique leads B2B, personalize jornadas de nutrição e otimize campanhas de marketing digital com o poder da Inteligência Artificial.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "BR"
+      },
+       "offers": {
+        "@type": "Offer",
+        "priceCurrency": "BRL",
+        "name": "Plano Pro - Marketing com IA"
+      },
+      "url": "https://laia.solutions#solucoes"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Offer",
+      "name": "Plano Inicial: Consultoria Estratégica IA",
+      "price": "1500",
+      "priceCurrency": "BRL",
+      "description": "Diagnóstico preciso e plano estratégico para iniciar sua jornada de automação com IA. Inclui mapeamento de oportunidades e relatório de potencial de economia.",
+      "category": "Consultoria em Inteligência Artificial",
+      "url": "https://laia.solutions#precos",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "La.iA"
+      },
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Sessão de Consultoria Estratégica em IA"
+      }
+    }
+    </script>
+     <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Offer",
+      "name": "Plano Pro: Implementação Completa de Soluções IA",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "price": "Sob Consulta",
+        "priceCurrency": "BRL",
+        "valueAddedTaxIncluded": "false" 
+      },
+      "description": "Implementação de soluções de IA customizadas e integradas aos seus processos B2B, incluindo desenvolvimento, integração com sistemas e suporte.",
+      "category": "Implementação de Inteligência Artificial",
+      "url": "https://laia.solutions#precos",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "La.iA"
+      },
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Implementação Personalizada de Soluções de IA"
+      }
+    }
+    </script>
+
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.querySelectorAll('#mobile-menu a, header nav a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                if(link.getAttribute('href').startsWith('#')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        const calcularCustoButton = document.getElementById('calcularCusto');
+        const resultadosCustoDiv = document.getElementById('resultadosCusto');
+        let custoChartInstance = null;
+
+        calcularCustoButton.addEventListener('click', () => {
+            const horasDiarias = parseFloat(document.getElementById('horasDiarias').value) || 0;
+            const custoHora = parseFloat(document.getElementById('custoHora').value) || 0;
+            const numFuncionarios = parseFloat(document.getElementById('numFuncionarios').value) || 0;
+            const diasTrabalhoMes = 22; 
+
+            const custoDiarioPorFuncionario = horasDiarias * custoHora;
+            const custoMensalTotal = custoDiarioPorFuncionario * numFuncionarios * diasTrabalhoMes;
+            const custoAnualTotal = custoMensalTotal * 12;
+            const economiaEstimada = custoAnualTotal * 0.6; 
+
+            document.getElementById('custoMensal').textContent = `R$ ${custoMensalTotal.toFixed(2).replace('.', ',')}`;
+            document.getElementById('custoAnual').textContent = `R$ ${custoAnualTotal.toFixed(2).replace('.', ',')}`;
+            document.getElementById('economiaAnualLaia').textContent = `R$ ${economiaEstimada.toFixed(2).replace('.', ',')}`;
+            
+            resultadosCustoDiv.classList.remove('hidden');
+
+            const ctx = document.getElementById('custoChart').getContext('2d');
+            
+            if (custoChartInstance) {
+                custoChartInstance.destroy();
+            }
+
+            custoChartInstance = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Custo Anual Atual', 'Custo Anual com La.iA (Estimado)'],
+                    datasets: [{
+                        label: 'Estimativa de Custos (R$)',
+                        data: [custoAnualTotal, custoAnualTotal - economiaEstimada],
+                        backgroundColor: [
+                            'rgba(220, 38, 38, 0.7)', 
+                            'rgba(129, 140, 248, 0.7)' 
+                        ],
+                        borderColor: [
+                            'rgba(185, 28, 28, 1)', 
+                            'rgba(101, 116, 205, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y', 
+                    scales: {
+                        x: { 
+                            beginAtZero: true,
+                            ticks: {
+                                color: '#475569', 
+                                callback: function(value) {
+                                    return 'R$ ' + value.toLocaleString('pt-BR');
+                                }
+                            },
+                            grid: {
+                                color: '#e2e8f0' 
+                            }
+                        },
+                        y: {
+                             ticks: {
+                                color: '#475569' 
+                            },
+                            grid: {
+                                display: false
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            backgroundColor: '#1e293b', 
+                            titleColor: '#f8fafc', 
+                            bodyColor: '#cbd5e1', 
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.x !== null) { 
+                                        label += 'R$ ' + context.parsed.x.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.dataset.tab;
+                const isLightSection = button.closest('.light-section') !== null;
+
+                tabButtons.forEach(btn => {
+                    const btnIsLightSection = btn.closest('.light-section') !== null;
+                    btn.classList.remove('active');
+                    if (btnIsLightSection) {
+                        btn.classList.remove('text-purple-600', 'border-purple-600');
+                        btn.classList.add('text-slate-600', 'border-transparent', 'hover:border-purple-500');
+                    } else {
+                        btn.classList.remove('text-purple-500', 'border-purple-600');
+                        btn.classList.add('text-slate-300', 'border-transparent', 'hover:border-purple-500');
+                    }
+                });
+                
+                button.classList.add('active');
+                 if (isLightSection) {
+                    button.classList.add('text-purple-600', 'border-purple-600');
+                    button.classList.remove('text-slate-600', 'border-transparent', 'hover:border-purple-500');
+                } else {
+                    button.classList.add('text-purple-500', 'border-purple-600');
+                    button.classList.remove('text-slate-300', 'border-transparent', 'hover:border-purple-500');
+                }
+
+
+                tabContents.forEach(content => {
+                    content.classList.remove('active');
+                    if (content.id === `tab-${tabId}`) {
+                        content.classList.add('active');
+                    }
+                });
+            });
+        });
+        
+    </script>
+</body>
+</html>
