@@ -110,10 +110,24 @@
              color: #e2e8f0; /* slate-200 */
              font-size: 1.25rem; /* text-xl */
              font-weight: 600; /* semibold */
-             margin-bottom: 0.5rem; /* mb-2 */
+             margin-bottom: 0.75rem; /* mb-3 */
         }
         .dark-section-card-text {
             color: #cbd5e1; /* slate-300 */
+        }
+        .solution-item {
+            display: flex;
+            align-items: flex-start; /* Alinha o ícone com o topo da primeira linha do texto */
+            margin-bottom: 0.75rem; /* mb-3, para mais espaço entre itens */
+            line-height: 1.6; /* Melhora a legibilidade do texto do item */
+        }
+        .solution-item-icon {
+            color: #a855f7; /* purple-500 */
+            margin-right: 0.625rem; /* mr-2.5 */
+            margin-top: 0.2rem; /* Ajuste fino para alinhamento vertical com o texto */
+            font-size: 1rem; 
+            font-weight: bold; /* Torna o checkmark mais visível */
+            flex-shrink: 0;
         }
         .faq-item details {
             background-color: #1e293b; 
@@ -251,44 +265,44 @@
                         </nav>
                     </div>
 
-                    <div id="tab-atendimento" class="tab-content active p-4 bg-slate-900 rounded-lg shadow-md">
-                        <h3 class="dark-section-card-title">Automação Inteligente de Atendimento ao Cliente B2B</h3>
-                        <p class="dark-section-card-text mb-4">Nossos agentes de IA oferecem suporte 24/7, resolvem dúvidas, qualificam leads e aumentam a satisfação do cliente, reduzindo custos operacionais e melhorando a experiência do cliente B2B.</p>
-                         <ul class="list-disc list-inside dark-section-card-text space-y-1">
-                            <li>Implementação de Chatbots Corporativos com Processamento de Linguagem Natural</li>
-                            <li>Respostas instantâneas e precisas para FAQs complexas de negócios</li>
-                            <li>Triagem e direcionamento inteligente de chamados para equipes especializadas</li>
-                            <li>Coleta e análise de feedback automatizada para melhoria contínua dos serviços</li>
+                    <div id="tab-atendimento" class="tab-content active p-6 bg-slate-900 rounded-lg shadow-md">
+                        <h3 class="dark-section-card-title text-purple-400 text-2xl">Automação Inteligente de Atendimento ao Cliente B2B</h3>
+                        <p class="dark-section-card-text mb-6 text-base">Nossos agentes de IA oferecem suporte 24/7, resolvem dúvidas, qualificam leads e aumentam a satisfação do cliente, reduzindo custos operacionais e melhorando a experiência do cliente B2B.</p>
+                         <ul class="dark-section-card-text">
+                            <li class="solution-item"><span class="solution-item-icon">✓</span>Implementação de Chatbots Corporativos com Processamento de Linguagem Natural</li>
+                            <li class="solution-item"><span class="solution-item-icon">✓</span>Respostas instantâneas e precisas para FAQs complexas de negócios</li>
+                            <li class="solution-item"><span class="solution-item-icon">✓</span>Triagem e direcionamento inteligente de chamados para equipes especializadas</li>
+                            <li class="solution-item"><span class="solution-item-icon">✓</span>Coleta e análise de feedback automatizada para melhoria contínua dos serviços</li>
                         </ul>
                     </div>
-                    <div id="tab-processos" class="tab-content p-4 bg-slate-900 rounded-lg shadow-md">
-                        <h3 class="dark-section-card-title">Otimização de Processos Internos Empresariais com IA</h3>
-                        <p class="dark-section-card-text mb-4">Automatize fluxos de trabalho em RH, finanças e operações B2B. Aumente a agilidade da sua empresa, reduza a carga manual e elimine custos desnecessários com nossas soluções de IA.</p>
-                        <ul class="list-disc list-inside dark-section-card-text space-y-1">
-                            <li>Consultoria para automação de tarefas repetitivas e demoradas em processos empresariais</li>
-                            <li>Otimização de fluxos de aprovação e validação de documentos corporativos</li>
-                            <li>Gestão inteligente de documentos e dados empresariais com IA</li>
-                            <li>Redução de erros manuais e retrabalho em operações B2B críticas</li>
+                    <div id="tab-processos" class="tab-content p-6 bg-slate-900 rounded-lg shadow-md">
+                        <h3 class="dark-section-card-title text-purple-400 text-2xl">Otimização de Processos Internos Empresariais com IA</h3>
+                        <p class="dark-section-card-text mb-6 text-base">Automatize fluxos de trabalho em RH, finanças e operações B2B. Aumente a agilidade da sua empresa, reduza a carga manual e elimine custos desnecessários com nossas soluções de IA.</p>
+                        <ul class="dark-section-card-text">
+                            <li class="solution-item"><span class="solution-item-icon">✓</span>Consultoria para automação de tarefas repetitivas e demoradas em processos empresariais</li>
+                            <li class="solution-item"><span class="solution-item-icon">✓</span>Otimização de fluxos de aprovação e validação de documentos corporativos</li>
+                            <li class="solution-item"><span class="solution-item-icon">✓</span>Gestão inteligente de documentos e dados empresariais com IA</li>
+                            <li class="solution-item"><span class="solution-item-icon">✓</span>Redução de erros manuais e retrabalho em operações B2B críticas</li>
                         </ul>
                     </div>
-                    <div id="tab-analise" class="tab-content p-4 bg-slate-900 rounded-lg shadow-md">
-                        <h3 class="dark-section-card-title">Análise Preditiva e Business Intelligence para Empresas</h3>
-                        <p class="dark-section-card-text mb-4">Transforme dados em inteligência acionável para seu negócio B2B. Identifique tendências de mercado, preveja resultados e tome decisões que otimizam investimentos e reduzem riscos.</p>
-                         <ul class="list-disc list-inside dark-section-card-text space-y-1">
-                            <li>Previsão de demanda e comportamento de consumo no setor B2B com IA</li>
-                            <li>Identificação de padrões, anomalias e oportunidades de crescimento de negócios</li>
-                            <li>Análise de sentimento de clientes corporativos em larga escala</li>
-                            <li>Otimização de precificação e estratégias de estoque para empresas com IA</li>
+                    <div id="tab-analise" class="tab-content p-6 bg-slate-900 rounded-lg shadow-md">
+                        <h3 class="dark-section-card-title text-purple-400 text-2xl">Análise Preditiva e Business Intelligence para Empresas</h3>
+                        <p class="dark-section-card-text mb-6 text-base">Transforme dados em inteligência acionável para seu negócio B2B. Identifique tendências de mercado, preveja resultados e tome decisões que otimizam investimentos e reduzem riscos.</p>
+                         <ul class="dark-section-card-text">
+                            <li class="solution-item"><span class="solution-item-icon">✓</span>Previsão de demanda e comportamento de consumo no setor B2B com IA</li>
+                            <li class="solution-item"><span class="solution-item-icon">✓</span>Identificação de padrões, anomalias e oportunidades de crescimento de negócios</li>
+                            <li class="solution-item"><span class="solution-item-icon">✓</span>Análise de sentimento de clientes corporativos em larga escala</li>
+                            <li class="solution-item"><span class="solution-item-icon">✓</span>Otimização de precificação e estratégias de estoque para empresas com IA</li>
                         </ul>
                     </div>
-                    <div id="tab-marketing" class="tab-content p-4 bg-slate-900 rounded-lg shadow-md">
-                        <h3 class="dark-section-card-title">Automação de Marketing e Captação de Leads B2B com IA</h3>
-                        <p class="dark-section-card-text mb-4">Qualifique leads B2B com menor custo, personalize jornadas de nutrição, otimize campanhas de marketing digital e identifique as melhores oportunidades de conversão com o poder da IA.</p>
-                        <ul class="list-disc list-inside dark-section-card-text space-y-1">
-                            <li>Consultoria para qualificação e scoring automático de leads empresariais</li>
-                            <li>Personalização de campanhas de marketing B2B em escala com inteligência artificial</li>
-                            <li>Automação inteligente de nutrição de leads qualificados para vendas</li>
-                            <li>Otimização de funis de conversão e ROI em marketing digital B2B</li>
+                    <div id="tab-marketing" class="tab-content p-6 bg-slate-900 rounded-lg shadow-md">
+                        <h3 class="dark-section-card-title text-purple-400 text-2xl">Automação de Marketing e Captação de Leads B2B com IA</h3>
+                        <p class="dark-section-card-text mb-6 text-base">Qualifique leads B2B com menor custo, personalize jornadas de nutrição, otimize campanhas de marketing digital e identifique as melhores oportunidades de conversão com o poder da IA.</p>
+                        <ul class="dark-section-card-text">
+                            <li class="solution-item"><span class="solution-item-icon">✓</span>Consultoria para qualificação e scoring automático de leads empresariais</li>
+                            <li class="solution-item"><span class="solution-item-icon">✓</span>Personalização de campanhas de marketing B2B em escala com inteligência artificial</li>
+                            <li class="solution-item"><span class="solution-item-icon">✓</span>Automação inteligente de nutrição de leads qualificados para vendas</li>
+                            <li class="solution-item"><span class="solution-item-icon">✓</span>Otimização de funis de conversão e ROI em marketing digital B2B</li>
                         </ul>
                     </div>
                 </div>
@@ -360,25 +374,25 @@
                         <h3 class="dark-section-card-title text-2xl">Plano Inicial: Consultoria Estratégica IA</h3>
                         <p class="text-purple-400 font-semibold text-3xl mb-4">R$1.000 <span class="text-base font-normal text-slate-400">/sessão</span></p>
                         <p class="dark-section-card-text mb-6 flex-grow">Ideal para empresas B2B que buscam um diagnóstico preciso e um plano estratégico para iniciar sua jornada de automação com IA e inteligência artificial.</p>
-                        <ul class="dark-section-card-text space-y-2 mb-8 flex-grow">
-                            <li class="flex items-center"><span class="text-green-400 mr-2">✔</span>Consultoria Estratégica Detalhada em Inteligência Artificial</li>
-                            <li class="flex items-center"><span class="text-green-400 mr-2">✔</span>Mapeamento de Oportunidades de Automação Empresarial com IA</li>
-                            <li class="flex items-center"><span class="text-green-400 mr-2">✔</span>Desenho de Plano de Ação Inicial para Soluções de IA B2B</li>
-                            <li class="flex items-center"><span class="text-green-400 mr-2">✔</span>Relatório de Potencial de Economia e ROI com Inteligência Artificial</li>
+                        <ul class="dark-section-card-text">
+                            <li class="solution-item"><span class="solution-item-icon text-green-400">✓</span>Consultoria Estratégica Detalhada em Inteligência Artificial</li>
+                            <li class="solution-item"><span class="solution-item-icon text-green-400">✓</span>Mapeamento de Oportunidades de Automação Empresarial com IA</li>
+                            <li class="solution-item"><span class="solution-item-icon text-green-400">✓</span>Desenho de Plano de Ação Inicial para Soluções de IA B2B</li>
+                            <li class="solution-item"><span class="solution-item-icon text-green-400">✓</span>Relatório de Potencial de Economia e ROI com Inteligência Artificial</li>
                         </ul>
-                        <a href="#contato" class="mt-auto bg-purple-500 hover:bg-purple-600 text-white text-center font-semibold py-3 px-6 rounded-md transition-colors w-full">Quero o Plano Inicial de Consultoria IA</a>
+                        <a href="#contato" class="mt-auto bg-purple-500 hover:bg-purple-600 text-white text-center font-semibold py-3 px-6 rounded-md transition-colors w-full block mt-8">Quero o Plano Inicial de Consultoria IA</a>
                     </div>
                     <div class="bg-slate-900 p-8 rounded-lg shadow-2xl border-t-4 border-purple-600 flex flex-col hover:border-purple-500 transition-all duration-300">
                         <h3 class="dark-section-card-title text-2xl">Plano Pro: Implementação Completa de Soluções IA</h3>
                         <p class="text-purple-500 font-semibold text-3xl mb-4">Sob Consulta</p>
                         <p class="dark-section-card-text mb-6 flex-grow">Para empresas prontas para uma transformação digital completa, com implementação de soluções de IA customizadas e integradas aos seus processos B2B.</p>
-                        <ul class="dark-section-card-text space-y-2 mb-8 flex-grow">
-                            <li class="flex items-center"><span class="text-green-400 mr-2">✔</span>Todas as features do Plano Inicial de Consultoria IA</li>
-                            <li class="flex items-center"><span class="text-green-400 mr-2">✔</span>Desenvolvimento e Implementação de Soluções de Inteligência Artificial Personalizadas</li>
-                            <li class="flex items-center"><span class="text-green-400 mr-2">✔</span>Integração com Sistemas Empresariais Existentes (ERP, CRM)</li>
-                            <li class="flex items-center"><span class="text-green-400 mr-2">✔</span>Treinamento Especializado e Suporte Contínuo para Automação com IA</li>
+                        <ul class="dark-section-card-text">
+                            <li class="solution-item"><span class="solution-item-icon text-green-400">✓</span>Todas as features do Plano Inicial de Consultoria IA</li>
+                            <li class="solution-item"><span class="solution-item-icon text-green-400">✓</span>Desenvolvimento e Implementação de Soluções de Inteligência Artificial Personalizadas</li>
+                            <li class="solution-item"><span class="solution-item-icon text-green-400">✓</span>Integração com Sistemas Empresariais Existentes (ERP, CRM)</li>
+                            <li class="solution-item"><span class="solution-item-icon text-green-400">✓</span>Treinamento Especializado e Suporte Contínuo para Automação com IA</li>
                         </ul>
-                        <a href="#contato" class="mt-auto bg-purple-600 hover:bg-purple-700 text-white text-center font-semibold py-3 px-6 rounded-md transition-colors w-full">Solicitar Cotação para Implementação IA</a>
+                        <a href="#contato" class="mt-auto bg-purple-600 hover:bg-purple-700 text-white text-center font-semibold py-3 px-6 rounded-md transition-colors w-full block mt-8">Solicitar Cotação para Implementação IA</a>
                     </div>
                 </div>
             </div>
